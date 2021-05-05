@@ -43,7 +43,7 @@ Getting the associates used to coding in c#. Introduce them to project developme
 
 ## Day 3
 
-### Goal
+### Goal:
 
 To cement the foundations of OOP by relating it to implementations already coded.
 
