@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RRModels\RRModels.csproj" />
-    <ProjectReference Include="..\RRDL\RRDL.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

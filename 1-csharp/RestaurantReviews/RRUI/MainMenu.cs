@@ -6,31 +6,30 @@ namespace RRUI
         public void Start()
         {
             bool repeat = true;
-            Console.WriteLine("Welcome to Restuarant Reviews!");
-            Console.WriteLine("[0] Add a restaurant");
-            Console.WriteLine("[1] Exit");
-            string input = Console.ReadLine();
             do
             {
+                Console.WriteLine("Welcome to my Restaurant Reviews Application!");
+                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("[0] CRUD Restaurants");
+                Console.WriteLine("[1] Exit");
+                string input = Console.ReadLine();
                 switch (input)
                 {
                     case "0":
-                        AddARestaurant();
+                        //TODO: Fix this
+                        MenuFactory.GetMenu("restaurant").Start();
                         break;
                     case "1":
+                        //exit
+                        Console.WriteLine("Goodbye cruel world.");
                         repeat = false;
-                        Console.WriteLine("Goodbye!");
                         break;
                     default:
-                        Console.WriteLine("Invalid option!");
+                        //invalid input
+                        Console.WriteLine("Please input a valid option");
                         break;
                 }
             } while (repeat);
-
-        }
-        public void AddARestaurant()
-        {
-            Console.WriteLine();
         }
     }
 }
