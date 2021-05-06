@@ -71,3 +71,23 @@ To cement the foundations of OOP by relating it to implementations already coded
 - For logging group:
   - Demo how to format logs
   - Talk about any logging levels
+
+## Day 4
+
+### Goal:
+
+To finish a prototype of the batch application. Associates should be able to have all the necessary information to begin working on a prototype of their p0.
+
+### Materials:
+
+- File I/O
+- Serialization
+- Exception Handling
+- Application Monitoring
+
+### Activities:
+
+- Finish prototype of the Restaurant Reviews application
+- Finish File I/O, Serialization and Exception Handling in the Morning
+- Spend the rest of the day on Restaurant Reviews prototype
+- Finish the day with a discussion on Application monitoring
