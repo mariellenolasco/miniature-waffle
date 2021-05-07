@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 /// <summary>
 /// Namespace for the models/custom data structures involved in Restaurant Reviews
 /// </summary>
@@ -9,6 +11,7 @@ namespace RRModels
     /// </summary>
     public class Restaurant
     {
+        private string _city;
         // Class Members
         // 1. Constructor - use this to create an instance of the class
         // 2. Fields - defines the characteristics of a class
@@ -35,7 +38,15 @@ namespace RRModels
         /// This describes the location
         /// </summary>
         /// <value></value>
-        public string City { get; set; }
+        public string City
+        {
+            get { return _city; }
+            set
+            {
+                if (!Regex.IsMatch(value, @"^[a-zA-Z]+$")) throw new Exception("City cannot have numbers!");
+                _city = value;
+            }
+        }
         /// <summary>
         /// This describes the location
         /// </summary>
