@@ -43,7 +43,7 @@ namespace RRModels
             get { return _city; }
             set
             {
-                if (!Regex.IsMatch(value, @"^[a-zA-Z]+$")) throw new Exception("City cannot have numbers!");
+                if (!Regex.IsMatch(value, @"^[a-zA-Z ]+$")) throw new Exception("City cannot have numbers!");
                 _city = value;
             }
         }
