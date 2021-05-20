@@ -1,0 +1,40 @@
+﻿@model IEnumerable<RRModels.Review>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@ViewBag.Restaurant.Name</h1>
+<h4>@ViewBag.Restaurant.City, @ViewBag.Restaurant.State</h4>
+<h6>Overall Rating: @ViewData["OverallRating"]</h6>
+<p>
+    @Html.ActionLink("Add a review", "Create", new { id = ViewBag.Restaurant.Id })
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    @Html.ActionLink("Back to list of restaurants", "Index", "Restaurant")
+</p>
